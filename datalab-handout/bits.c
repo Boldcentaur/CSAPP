@@ -214,7 +214,7 @@ int isAsciiDigit(int x) {
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-  return 0;
+  return (y + z) + (~((!x + (~1 + 1)) & z) + 1) + (~((!!x + (~1 + 1)) & y) + 1);
 }
 /* 
  * isLessOrEqual - if x <= y  then return 1, else return 0 
@@ -248,7 +248,7 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-  return 2;
+  return (((~x + 1) | x) >> 31) + 1;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
